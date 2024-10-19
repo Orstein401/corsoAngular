@@ -1,0 +1,44 @@
+<!-- <nav>
+    <ul  class='flex'>
+        <li>Contatti</li>
+        <li>User</li>
+    </ul>
+</nav>
+<section>
+    <div class='parent'><h1>lista prodotti Parent</h1>
+        <ul>
+            <li *ngFor="let items of spesa" (click)="selectProduct(items)">
+                {{items.nome}} - {{items.prezzo}}
+            </li>
+            
+        </ul>
+    </div>
+   
+</section>
+<section>
+    <div> <app-lista-spesa (messaggioInviato)="riceviMessaggio($event)" [list]="prodSelezionato"></app-lista-spesa> </div>
+    <div> 
+        <h3> Child </h3>
+        <p> {{messaggioRicevuto}}</p> 
+    </div>
+</section>
+<footer>
+    Footer
+</footer> -->
+<!-- <app-user></app-user> -->
+ <div>
+    <ul>
+        <!-- <li routerLink="use">User</li> 
+        <li (click)="goToUser()"> Somma</li>
+        <li routerLink="form"> Form</li>
+        <li routerLink="esercizio"> Esercizio</li> -->
+        <li routerLink="reattivo"> Registrazione</li>
+        <li routerLink="dettagli"> dettagli</li>
+
+
+        <!-- <li routerLink="es_reactive"> Reactive Esercizio</li> -->
+
+
+    </ul>
+ </div>
+ <router-outlet></router-outlet>

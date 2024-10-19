@@ -1,0 +1,31 @@
+<div>
+ <h2> Profilo Utente</h2>
+ <label for="ruolo"> Seleziona ruolo</label>
+ <select id="ruolo" [(ngModel)]="ruolo">
+    <option value="admin">Admin</option>
+    <option value="utente">utente</option>
+    <option value="ospite">Ospite</option>
+ </select>
+ <div [ngSwitch]="ruolo">
+    <div *ngSwitchCase="'admin'"> 
+        <h3>Admin</h3>
+        <p> Visualizzare i dati personali</p>
+        <p>modifica impostazioni</p>
+        <p>Gestione utenti</p>
+    </div>
+    <div *ngSwitchCase="'utente'"> 
+        <h3>utente</h3>
+        <p> Visualizzare i dati personali</p>
+        <p>modifica impostazioni personali</p>
+    </div>
+    <div *ngSwitchCase="'ospite'"> 
+        <h3>Ospite</h3>
+        <p> Visualizzare i dati personali</p>
+    </div>
+    <div *ngSwitchDefault> 
+        <h3> Nessun ruolo selezionato</h3>
+        <p> Seleziona un ruolo per vedere le tue azioni</p>
+    </div>
+ </div>
+</div>
+

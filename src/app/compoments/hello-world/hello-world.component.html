@@ -1,3 +1,42 @@
-<h1>{{message}}</h1>
+<!-- <h1>{{message}}</h1>
 <input type="text" [(ngModel)]=name/>
 <p> il tuo nomee: {{name}}</p>
+<br>
+<p *ngIf="veri; else isFalse">Sono visibile solo con true</p>
+<ng-template #isFalse>
+    sono visibile con false
+</ng-template>
+<button (click)="this.veri= ! this.veri"> Clicca</button>
+<br>
+<ng-container *ngIf="vis; else cari"> e ora aspetti...</ng-container>
+
+<ng-template #cari>
+    fatto
+</ng-template>
+<button (click)="this.vis= ! this.vis"> Clicca</button> -->
+<!-- <ul>
+    <li *ngFor="let persona of persone; let i=index">
+        {{i+1}}  {{persona.nome}} {{persona.eta}}
+    </li>
+</ul> -->
+<h2>STA QUI</h2>
+<select  [(ngModel)]=npaese>
+    <option *ngFor=" let paese of paesi"> 
+        {{paese}}
+    </option>
+</select>
+<div>
+    <p> il paese selezionato è: {{npaese}}</p>
+</div>
+<table class="table">
+    <thead>
+        <th>Prodotto</th>
+        <th>Prezzo</th>
+    </thead>
+    <tbody *ngFor="let item of prodotti"> 
+        <td>
+            {{item.prodotto}}
+        </td>
+        <td> {{item.prezzo}}</td>
+    </tbody>
+</table>

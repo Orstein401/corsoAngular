@@ -1,0 +1,27 @@
+<h1> Reactive forms lezione</h1>
+<form [formGroup]="myForm">
+    <div>
+        <label for="username">Username</label>
+        <input formControlName="username"  type="text"/> 
+    </div>
+    <div *ngIf="myForm.get('username')?.invalid && myForm.get('username')?.touched">
+        il nome deve avere minimo 3 caratteri 
+    </div>
+  
+    <div >
+        <label for="email">email</label>
+        <input formControlName="email" type="text"/> 
+    </div>
+    <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+        email non valida
+    </div>
+    <div>
+        <label for="password">password</label>
+        <input formControlName="password" type="text"/> 
+    </div>
+    <div *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
+        Password deve essere minimo di 6 caratteri
+    </div>
+    <button (click)="serndData()" [disabled]="myForm.invalid">Invia</button>
+</form>
+

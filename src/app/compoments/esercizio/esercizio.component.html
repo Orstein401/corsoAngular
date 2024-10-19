@@ -1,0 +1,25 @@
+<h1> Registrazione</h1>
+<form #form="ngForm" (ngSubmit)="verifica(form)">
+    <div>
+        <label for="nome">NOme</label>
+        <input [(ngModel)]="reggi.username" type="text" name="username" id ="username" required/> 
+        <div *ngIf="form.submitted && !reggi.username">
+            campo non valido
+        </div>
+    </div>
+    <div>
+        <label for="email">email</label>
+        <input [(ngModel)]="reggi.email" type="text" name="email" id ="email"required/> 
+    </div>
+    <div *ngIf="form.submitted && !reggi.email">
+        campo email non valido
+    </div>
+    <div>
+        <label for="password">password</label>
+        <input [(ngModel)]="reggi.password" type="text" name="password" id ="password"required/> 
+    </div>
+    <div *ngIf="form.submitted && !reggi.password">
+        campo password non valido
+    </div>
+    <button type="submit">Invia</button>
+</form>
